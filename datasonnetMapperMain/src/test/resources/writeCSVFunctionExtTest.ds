@@ -1,0 +1,11 @@
+local params = {
+    "UseHeader": "false",
+    "Quote": "'",
+    "Separator": "|",
+    "Escape": "\\",
+    "NewLine": "LF"
+};
+
+{
+    embeddedCSVValue: ds.write(payload, "application/csv", params)
+}

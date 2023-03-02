@@ -1,0 +1,16 @@
+local params = {
+    "DateFormat": "yyyy-MM-dd"
+};
+
+local obj = {
+    "name": payload.pojoName,
+    "quantity": payload.pojoQuantity,
+    "inStock": payload.pojoInStock,
+    "colors": payload.pojoColors,
+    "manufacturer": payload.pojoManufacturer,
+    "date": payload.pojoDate
+};
+
+{
+    test: ds.write(obj, "application/x-java-object", params)
+}
